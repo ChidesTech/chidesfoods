@@ -1,0 +1,133 @@
+.container{
+    height: 100px;
+    padding: 0px 50px;
+    background: orangered;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 8;
+    font-family: 'Courgette';
+   box-shadow: 1px 1px 4px 1px rgb(41, 38, 38);
+
+}
+
+.brand{
+   font-size: 2rem;
+   color: black;
+
+}
+
+.brand i{
+   font-size: 4rem;
+   margin-right: 1px;
+}
+
+.headerItem{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    font-weight: 900;
+    cursor: pointer;
+}
+.headerItem:nth-child(2){
+    flex: 3;
+    justify-content: center;
+}
+.headerItem:last-child{
+    justify-content: flex-end;
+    gap: 3rem;
+}
+
+.searchInput{
+    color: black;
+    padding: .5rem .5rem;
+    margin-right: 5px;
+}
+
+.searchButton{
+    color: black;
+    background-color: orangered;
+    padding: .7rem 1.5rem;
+    border-radius: 5px;
+
+    
+}
+
+.texts{
+    margin-left: 20px;
+    color: black;
+}
+
+
+.texts:first-child{
+    font-size: 12px;
+    font-weight: 700;
+    background-color: black;
+    text-align: center;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+.reserve{
+    font-size: 12px;
+    font-weight: 700;
+    background-color: black;
+    text-align: center;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: .5rem;
+    color: white;
+}
+
+.texts:last-child{
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 2px;
+}
+
+.list{
+padding: 0;
+display: flex;
+align-items: center;
+list-style: none;
+color: black;
+
+}
+
+
+.listItem{
+margin: 50px;
+font-weight: 500;
+font-size: 1.9rem;
+}
+
+.cart{
+position: relative;
+
+}
+
+.cartIcon{
+    font-size: 3rem;
+}
+
+.cartCount{
+ position: absolute;
+ top: -10px;
+ right: -10px;
+ width: 20px;
+ height: 20px;
+ border-radius: 50%;
+ background-color: white;
+ padding: 3px;
+ display: flex;
+ padding: 4px;
+ align-items: center;
+ justify-content: center;
+ font-weight: bold;
+ color: black;
+
+}
