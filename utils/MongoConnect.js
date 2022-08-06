@@ -1,6 +1,7 @@
 import mongoose from 'mongoose'
 
-const MONGODB_URI = process.env.NEXT_PUBLIC_MONGODB_URI
+// const MONGODB_URI = process.env.NEXT_PUBLIC_MONGODB_URI
+const MONGODB_URI = process.env.NEXT_PUBLIC_ATLAS_URI
 
 if (!MONGODB_URI) {
   throw new Error(

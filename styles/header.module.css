@@ -1,6 +1,6 @@
 .container{
-    height: 100px;
-    padding: 0px 50px;
+    height: 80px;
+    padding: 0px 30px;
     background: orangered;
     color: black;
     display: flex;
@@ -9,9 +9,10 @@
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 8;
+    z-index: 101;
     font-family: 'Courgette';
    box-shadow: 1px 1px 4px 1px rgb(41, 38, 38);
+   
 
 }
 
@@ -46,6 +47,7 @@
     color: black;
     padding: .5rem .5rem;
     margin-right: 5px;
+    background-color: white;
 }
 
 .searchButton{
@@ -108,9 +110,10 @@ font-size: 1.9rem;
 .cart{
 position: relative;
 
+
 }
 
-.cartIcon{
+.cartIcon {
     font-size: 3rem;
 }
 
@@ -130,4 +133,25 @@ position: relative;
  font-weight: bold;
  color: black;
 
+}
+
+
+@media(max-width : 1000px){
+    .searchInput{
+       display: none;
+    }
+    
+    .searchButton{
+        display: none;
+       
+    
+        
+    }
+
+    .texts{
+        display: none;
+    }
+    .headerItem:nth-child(2){
+       display: none;
+    }
 }

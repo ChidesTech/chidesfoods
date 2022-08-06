@@ -18,7 +18,7 @@ const {
             res.status(500).send(error);
         }
     }
-
+   
     if(req.method === "POST"){
         try {
             let product = new Product(req.body);
@@ -29,5 +29,16 @@ const {
             res.status(500).send(error);
         }
     }
+
+    if(req.method === "DELETE"){
+        try {
+            const deletedProduct = await Product.findByIdAndRemove(id);
+            res.status(200).send(deletedProduct);
+
+        } catch (error) {
+            res.status(500).send(error);
+        }
+    }
+
   }
   

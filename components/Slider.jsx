@@ -8,7 +8,7 @@ export default function Slider(props) {
         "/images/dish/3.jpg",
        
     ]
-    return <>
+    return <> 
       <div className={styles.sliderContainer}>
        <div className={styles.sliderArrowWrapper} style={{left:0}}>
          <Image src="/chevron-left-solid.svg" alt="" layout="fill"  />

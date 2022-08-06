@@ -1,17 +1,26 @@
 import axios from 'axios';
-import Head from 'next/head';
-import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import {useRouter} from 'next/router';
+import { useState } from 'react';
+import {useDispatch} from "react-redux";
+import { addToCart } from '../../redux/cartSlice';
+
+
 
 export default function ProductPage({ product }) {
-
+    const [quantity, setQuantity] = useState(1);
+    const price = product.price;
+    const dispatch = useDispatch();
+    const router = useRouter();
+    const addToCartHandler = () =>{
+  dispatch(addToCart({...product, quantity}))
+// ccccrouter.push(`/cart`);
+} 
 
     return (<div className="content">
 
         <div className="details">
-            <div className="image-details">
-
-                <img src={product.image} alt={product.name} />
+            <div className="image-details" style={{marginBottom:"1rem"}}>
+               <img src={product.image} alt={product.name} />
             </div>
             <div className="info-details">
                 <ul>
@@ -21,30 +30,23 @@ export default function ProductPage({ product }) {
                     <li><strong>Details</strong><div>{product.description}</div></li>
                 </ul>
             </div>
-            <div className="action-details">
+            <div className="action-details" style={{marginTop:"1rem"}}>
                 <ul>
 
                     <li>Availability: {product.countInStock > 0 ? <span className="success">Still In Stock </span> :
                         <span className="error">Out Of Stock</span>}
                     </li>
+                    <br />
                     {
                         //  product.countInStock>0 && 
                         (
                             <>
-                                {/* <li className="quantity">
-                                    Quantity: <span>
-                                        <select className="quantity selected-quantity" value={qty} onChange={event => setQty(event.target.value)}>
-                                            {
-                                                [...Array(100).keys()].map(x => (
-                                                    <option key={x + 1} value={x + 1}>{x + 1}</option>
-                                                ))
-                                            }
-                                        </select>
-                                    </span>
-                                </li> */}
-                                <li style={{ display: "flex", gap: "4rem", marginTop: "3rem", marginBottom: "-2.5rem" }}>
-                                    {/* <li><Link id="add-btn" to={`/wishlist/${prodId}`} className="btn">Save Item</Link></li> */}
-                                    <li><button id="add-btn"  className="btn btn-black">Add To Cart</button></li>
+                                <li style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+                                    <div>
+                                        Quantity : <input value={quantity} onChange={e => setQuantity(e.target.value)} type="number" />
+                                    </div>
+
+                                    <button id="add-btn" onClick={addToCartHandler} className="btn btn-black ">Add To Cart</button>
                                 </li>
                             </>
 
@@ -61,7 +63,7 @@ export const getServerSideProps = async ({ params }) => {
     const { data } = await axios.get(`http://localhost:3000/api/products/${params.id}`)
     return {
         props: {
-            product: data
+            product: data 
         }
     }
 

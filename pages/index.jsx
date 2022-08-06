@@ -5,13 +5,11 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import Slider from '../components/Slider';
 import styles from '../styles/Home.module.css';
-
+import {useSelector} from "react-redux"; 
 export default function Home({products}) {
-
 	
 	return (
 		<div className={styles.container}>
-			
 			
 			<section className="full-bg video-bg mt-5" >
 				<div className="full-bg-overlay black-pat text-center">
@@ -19,7 +17,7 @@ export default function Home({products}) {
 						<h2 >CHIDES <span className="highlight">FOODS</span></h2>
 						<p >Prepared by world famous cooks</p>
 					</div>
-					<video src="/new.mp4" loop autoPlay muted>
+					<video src="/video.mp4" loop autoPlay muted>
 
 					</video>
 				</div>
@@ -287,4 +285,4 @@ export const getServerSideProps = async () =>{
 	}
 }
 
-}
+} 
