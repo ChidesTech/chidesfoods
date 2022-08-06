@@ -64,7 +64,7 @@ export default function ProfilePage({ user, orders }) {
                             <tr> <th>Date</th> <th>Customer</th> <th>Status</th> <th>Total ( ₦ )</th> <th>Actions</th> </tr>
     
                             {orders.map(order => {
-                                return <tr><td>{order.createdAt.substr(2, 8)}</td> <td>{order.name}</td>
+                                return <tr key={order._id}><td>{order.createdAt.substr(2, 8)}</td> <td>{order.name}</td>
                                     <td>Pending</td> <td>{order.total.toLocaleString()}</td>  <td>
                                         <button onClick={() => deleteHandler(order._id)} className="btn btn-red fa fa-trash-o"></button>
                                         <button className="btn btn-orange fa fa-eye"></button>

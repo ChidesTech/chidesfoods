@@ -39,7 +39,7 @@ export default function Users({ users, cookie }) {
                                 {users.length === 0 ? <div style={{width:"100%"}} className="alert alert-info">No user found</div> :
                                 
                                 <table style={{ width: "100%" }} className="products-table">
-                                    <tr><th>Date</th> <th>Email</th> <th>Username</th>  <th>Type</th>  <th>Actions</th></tr>
+                                    <tr key={user._id}><th>Date</th> <th>Email</th> <th>Username</th>  <th>Type</th>  <th>Actions</th></tr>
                                     {users.map(user => {
                                         return <tr> <td>{user.createdAt.substr(2,8)}</td> 
                                         <td>{user.email}</td> 

@@ -78,7 +78,7 @@ export default function Products({ products, cookie }) {
                                 {products.length === 0 ? <div style={{ width: "100%" }} className="alert alert-info">No product found</div> :
 
                                     <table style={{ width: "100%" }} className="products-table">
-                                        <tr><th>Date</th> <th>Image</th> <th>Title</th>  <th>Price ( ₦ )</th> <th>Count</th> <th>Actions</th></tr>
+                                        <tr key={product._id}><th>Date</th> <th>Image</th> <th>Title</th>  <th>Price ( ₦ )</th> <th>Count</th> <th>Actions</th></tr>
                                         {products.map(product => {
                                             return <tr> <td>{product.createdAt.substr(2, 8)}</td> <td><img src={product.image} alt="" /></td> <td>{product.title}</td>
                                                 <td>{product.price.toLocaleString()}</td> <td>4</td>  <td>

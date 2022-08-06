@@ -33,26 +33,26 @@ export default function Orders({ orders, cookie }) {
     return (
         <>
             <AdminSidebar page="orders" />
-            <section className="home-section">
+            <section class="home-section">
                 <AdminNav />
 
-                <div className="home-content">
+                <div class="home-content">
 
-                    <div className="sales-boxes" >
-                        <div className="recent-sales box" style={{ width: "100%" }} >
-                            <div className="title" >Orders</div>
-                            <div className="sales-details" >
+                    <div class="sales-boxes" >
+                        <div class="recent-sales box" style={{ width: "100%" }} >
+                            <div class="title" >Orders</div>
+                            <div class="sales-details" >
 
                                 {
-                                    orders.length === 0 ? <div classNameName="alert alert-info w-100">No Orders Found</div> :
-                                        <table style={{ width: "100%" }} classNameName="products-table">
+                                    orders.length === 0 ? <div className="alert alert-info w-100">No Orders Found</div> :
+                                        <table style={{ width: "100%" }} className="products-table">
                                             <tr> <th>Date</th> <th>Customer</th> <th>Status</th> <th>Total ( ₦ )</th> <th>Actions</th> </tr>
 
                                             {orders.map(order => {
-                                                return <tr><td>{order.createdAt.substr(2, 8)}</td> <td>{order.name}</td>
+                                                return <tr key={order._id}><td>{order.createdAt.substr(2, 8)}</td> <td>{order.name}</td>
                                                     <td>Delivered</td> <td>{order.total.toLocaleString()}</td>  <td>
-                                                        <button onClick={() => deleteHandler(order._id)} classNameName="btn btn-red fa fa-trash-o"></button>
-                                                        <button classNameName="btn btn-orange fa fa-eye"></button>
+                                                        <button onClick={() => deleteHandler(order._id)} className="btn btn-red fa fa-trash-o"></button>
+                                                        <button className="btn btn-orange fa fa-eye"></button>
                                                     </td></tr>
 
                                             })}
@@ -62,7 +62,7 @@ export default function Orders({ orders, cookie }) {
 
 
                             </div>
-                            {/* <div className="button">
+                            {/* <div class="button">
                                 <a href="#">See All</a>
                             </div> */}
                         </div>
