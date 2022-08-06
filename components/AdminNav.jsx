@@ -13,18 +13,18 @@ export default function AdminNav({  }) {
     return (
         <>
           <nav>
-<div class="sidebar-button">
-    <i class='bx bx-menu sidebarBtn'></i>
-    <span class="dashboard"></span>
+<div className="sidebar-button">
+    <i className='bx bx-menu sidebarBtn'></i>
+    <span className="dashboard"></span>
 </div>
-<div class="search-box">
+<div className="search-box">
     <input type="text" placeholder="Search..." />
-    <i class='fa fa-search bx bx-search' ></i>
+    <i className='fa fa-search bx bx-search' ></i>
 </div>
-<div class="profile-details">
+<div className="profile-details">
     <img src="/images/dp.jpg" alt="" />
-    <span class="admin_name">{user && user.username}</span>
-    {/* <i class='bx bx-chevron-down' ></i> */}
+    <span className="admin_name">{user && user.username}</span>
+    {/* <i className='bx bx-chevron-down' ></i> */}
 </div>
 </nav> 
 

@@ -17,14 +17,14 @@ export default function Categories({ products, cookie }) {
     return (
         <>
            <AdminSidebar page="categories"/>
-            <section class="home-section">
+            <section className="home-section">
                <AdminNav/>
-                <div class="home-content">
+                <div className="home-content">
 
-                    <div class="sales-boxes" >
-                        <div class="recent-sales box" style={{ width: "100%" }} >
-                            <div class="title" style={{ textAlign: "center" }}>Categories</div>
-                            <div class="sales-details" >
+                    <div className="sales-boxes" >
+                        <div className="recent-sales box" style={{ width: "100%" }} >
+                            <div className="title" style={{ textAlign: "center" }}>Categories</div>
+                            <div className="sales-details" >
 
                                 <table style={{ width: "100%" }}>
                                     <tr><th>Date</th> <th>Customer</th> <th>Status</th> <th>Total ( ₦ )</th></tr>
@@ -38,7 +38,7 @@ export default function Categories({ products, cookie }) {
                                     <tr><td>02-21</td> <td>Desmond Nwosu</td> <td>Unpaid</td> <td>3,000</td></tr>
                                 </table>
                             </div>
-                            {/* <div class="button">
+                            {/* <div className="button">
                                 <a href="#">See All</a>
                             </div> */}
                         </div>

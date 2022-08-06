@@ -50,12 +50,12 @@ export default function ProfilePage({ user, orders }) {
 
             {
                 display === "orders" && 
-                <div class="home-content" style={{marginTop:"1rem"}}>
+                <div className="home-content" style={{marginTop:"1rem"}}>
     
-                    <div class="sales-boxes" >
-                        <div class="recent-sales box" style={{ width: "100%" }} >
-                            <div class="title" >Orders</div>
-                            <div class="sales-details" >
+                    <div className="sales-boxes" >
+                        <div className="recent-sales box" style={{ width: "100%" }} >
+                            <div className="title" >Orders</div>
+                            <div className="sales-details" >
     
                              
                                  {
@@ -80,7 +80,7 @@ export default function ProfilePage({ user, orders }) {
     
     
                             </div>
-                            {/* <div class="button">
+                            {/* <div className="button">
                 <a href="#">See All</a>
             </div> */}
                         </div>
