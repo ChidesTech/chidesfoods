@@ -33,15 +33,15 @@ export default function Orders({ orders, cookie }) {
     return (
         <>
             <AdminSidebar page="orders" />
-            <section class="home-section">
+            <section className="home-section">
                 <AdminNav />
 
-                <div class="home-content">
+                <div className="home-content">
 
-                    <div class="sales-boxes" >
-                        <div class="recent-sales box" style={{ width: "100%" }} >
-                            <div class="title" >Orders</div>
-                            <div class="sales-details" >
+                    <div className="sales-boxes" >
+                        <div className="recent-sales box" style={{ width: "100%" }} >
+                            <div className="title" >Orders</div>
+                            <div className="sales-details" >
 
                                 {
                                     orders.length === 0 ? <div className="alert alert-info w-100">No Orders Found</div> :
@@ -62,7 +62,7 @@ export default function Orders({ orders, cookie }) {
 
 
                             </div>
-                            {/* <div class="button">
+                            {/* <div className="button">
                                 <a href="#">See All</a>
                             </div> */}
                         </div>
