@@ -70,7 +70,7 @@ export default function Users({ users, cookie }) {
 
 export const getServerSideProps = async ctx => {
     const cookie = ctx.req.cookies && ctx.req.cookies;
-    const { data } = await axios.get("http://localhost:3000/api/users")
+    const { data } = await axios.get("//users")
     return {
         props: {
             users: data,

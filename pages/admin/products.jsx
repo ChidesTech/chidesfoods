@@ -29,7 +29,7 @@ export default function Products({ products, cookie }) {
         };
 
         try {
-            const { data } = await axios.post("http://localhost:3000/api/products", { title, price, description, image: "http://localhost:3000/images/dish/1.jpg" })
+            const { data } = await axios.post("//products", { title, price, description, image: "http://localhost:3000/images/dish/1.jpg" })
             if (data) {
                 alert("Product Saved Successfully")
                 window.location.reload();
@@ -44,7 +44,7 @@ export default function Products({ products, cookie }) {
     const deleteHandler = async (id) => {
 
         try {
-            const { data } = await axios.delete("http://localhost:3000/api/products/" + id)
+            const { data } = await axios.delete("//products/" + id)
             if (data) {
                 alert("Product Deleted Successfully")
                 window.location.reload();
@@ -144,7 +144,7 @@ export default function Products({ products, cookie }) {
 
 export const getServerSideProps = async ctx => {
     const cookie = ctx.req.cookies && ctx.req.cookies;
-    const { data } = await axios.get("http://localhost:3000/api/products")
+    const { data } = await axios.get("//products")
     return {
         props: {
             products: data,

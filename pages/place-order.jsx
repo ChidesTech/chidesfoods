@@ -20,7 +20,7 @@ export default function PlaceOrder() {
 
     const placeOrder = async () =>{
         try {
-            const {data} = await axios.post("http://localhost:3000/api/orders", {
+            const {data} = await axios.post("//orders", {
                 name : checkout.name,
                 address : checkout.address,
                 number : checkout.number,

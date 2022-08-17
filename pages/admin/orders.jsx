@@ -17,7 +17,7 @@ export default function Orders({ orders, cookie }) {
     const deleteHandler = async (id) => {
 
         try {
-            const { data } = await axios.delete("http://localhost:3000/api/orders/" + id)
+            const { data } = await axios.delete("//orders/" + id)
             if (data) {
                 alert("Order Deleted Successfully")
                 window.location.reload();
@@ -78,7 +78,7 @@ export default function Orders({ orders, cookie }) {
 
 export const getServerSideProps = async ctx => {
     const cookie = ctx.req.cookies && ctx.req.cookies;
-    const { data } = await axios.get("http://localhost:3000/api/orders")
+    const { data } = await axios.get("//orders")
     return {
         props: {
             orders: data,

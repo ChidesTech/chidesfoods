@@ -98,7 +98,7 @@ export default function Products({ cookie, page }) {
 
 // export const getServerSideProps = async ctx => {
 //     const cookie = ctx.req.cookies && ctx.req.cookies;
-//     const { data } = await axios.get("http://localhost:3000/api/products")
+//     const { data } = await axios.get("//products")
 //     return {
 //         props: {
 //             products: data,

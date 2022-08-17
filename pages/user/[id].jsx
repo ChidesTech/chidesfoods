@@ -98,7 +98,7 @@ export default function ProfilePage({ user, orders }) {
 
 
 export const getServerSideProps = async ({ params }) => {
-    const { data } = await axios.get(`http://localhost:3000/api/users/${params.id}`)
+    const { data } = await axios.get(`//users/${params.id}`)
     return {
         props: {
             user: data.user,
