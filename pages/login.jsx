@@ -32,7 +32,7 @@ export default function Login() {
         }
 
         try {
-            const { data } = await axios.post("//users/login", { email, password });
+            const { data } = await axios.post("/api/users/login", { email, password });
             if (data) {
                 alert("Login Successful");
                 

@@ -43,7 +43,7 @@ export default function Register() {
 
          }
          try {
-            const {data} = await axios.post("//users/register", {email, username, password});
+            const {data} = await axios.post("/api/users/register", {email, username, password});
             if(data){
                 alert("Registration Successful");
                 router.push("/login")
