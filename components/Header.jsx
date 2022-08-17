@@ -54,7 +54,7 @@ export default function Header() {
                         </div>
                     </a>
                 </Link>
-                <div className={styles.reserve}>RESERVE A TABLE </div>
+                <div className={styles.reserve}>RESERVE TABLE </div>
 
             </div>
         </div>
