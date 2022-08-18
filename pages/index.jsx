@@ -278,7 +278,7 @@ export default function Home({products}) {
 
 
 export const getServerSideProps = async () =>{
-	const {data} = await axios.get("/api/products")
+	const {data} = await axios.get("https://chidesfoods.netlify.app/api/products")
 	return {
 		props:{
 			products : data
