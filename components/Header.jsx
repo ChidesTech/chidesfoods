@@ -21,7 +21,7 @@ export default function Header() {
                         <button className={styles.searchButton}><i className="fa fa-search"></i></button>
                     </div>
 
-     {!user._id &&  <Link href="/login">
+     {!user &&  <Link href="/login">
      <li className={styles.listItem}> Login 
      </li>
      </Link>}
@@ -54,7 +54,7 @@ export default function Header() {
                         </div>
                     </a>
                 </Link>
-                <div className={styles.reserve}>RESERVE TABLE </div>
+                <div className={styles.reserve}>RESERVE A TABLE </div>
 
             </div>
         </div>

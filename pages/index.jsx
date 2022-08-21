@@ -3,10 +3,21 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import Slider from '../components/Slider';
 import styles from '../styles/Home.module.css';
-import {useSelector} from "react-redux"; 
-export default function Home({products}) {
+export default function Home() {
+	const [products, setProducts] = useState([]);
+
+	useEffect(() =>{
+		async function getProducts(){
+			try {
+				const {data} = await axios.get("http://localhost:3000/api/products");
+				setProducts(data);
+			} catch (error) {
+				console.log(error)
+			}
+		}
+		getProducts()
+	},[])
 	
 	return (
 		<div className={styles.container}>
@@ -277,12 +288,12 @@ export default function Home({products}) {
 }
 
 
-export const getServerSideProps = async () =>{
-	const {data} = await axios.get("https://chidesfoods.netlify.app/api/products")
-	return {
-		props:{
-			products : data
-	}
-}
+// export const getServerSideProps = async () =>{
+// 	const {data} = await axios.get("http://localhost:3000/api/products")
+// 	return {
+// 		props:{
+// 			products : data
+// 	}
+// }
 
-} 
+// } 
