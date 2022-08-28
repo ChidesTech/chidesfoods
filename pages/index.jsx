@@ -4,20 +4,21 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import styles from '../styles/Home.module.css';
-export default function Home() {
-	const [products, setProducts] = useState([]);
+export default function Home({products}) {
+	// const [products, setProducts] = useState([]);
 
-	useEffect(() =>{
-		async function getProducts(){
-			try {
-				const {data} = await axios.get("/api/products");
-				setProducts(data);
-			} catch (error) {
-				console.log(error)
-			}
-		}
-		getProducts()
-	},[])
+	// useEffect(() =>{
+	// 	async function getProducts(){
+	// 		try {
+	// 			const {data} = await axios.get("/api/products");
+	// 			setProducts(data);
+	// 			console.log(products);
+	// 		} catch (error) {
+	// 			console.log(error)
+	// 		}
+	// 	}
+	// 	getProducts()
+	// },[])
 	
 	return (
 		<div className={styles.container}>
@@ -288,12 +289,12 @@ export default function Home() {
 }
 
 
-// export const getServerSideProps = async () =>{
-// 	const {data} = await axios.get("http://localhost:3000/api/products")
-// 	return {
-// 		props:{
-// 			products : data
-// 	}
-// }
+export const getStaticProps = async () =>{
+	const {data} = await axios.get("/api/products")
+	return {
+		props:{
+			products : data
+	}
+}
 
-// } 
+} 

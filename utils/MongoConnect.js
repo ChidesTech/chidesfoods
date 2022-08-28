@@ -1,8 +1,8 @@
 import mongoose from 'mongoose'
 
-// const MONGODB_URI = process.env.NEXT_PUBLIC_MONGODB_URI
+const MONGODB_URI = process.env.NEXT_PUBLIC_MONGODB_URI
 // const MONGODB_URI = process.env.NEXT_PUBLIC_ATLAS_URI
-const MONGODB_URI = "mongodb://chidestech:1Luvumum%2f@cluster0-shard-00-00.pzpph.mongodb.net:27017,cluster0-shard-00-01.pzpph.mongodb.net:27017,cluster0-shard-00-02.pzpph.mongodb.net:27017/kenac-sports?ssl=true&replicaSet=atlas-sg448v-shard-0&authSource=admin&retryWrites=true&w=majority";
+// const MONGODB_URI = "mongodb://chidestech:1Luvumum%2f@cluster0-shard-00-00.pzpph.mongodb.net:27017,cluster0-shard-00-01.pzpph.mongodb.net:27017,cluster0-shard-00-02.pzpph.mongodb.net:27017/kenac-sports?ssl=true&replicaSet=atlas-sg448v-shard-0&authSource=admin&retryWrites=true&w=majority";
 
 
 
