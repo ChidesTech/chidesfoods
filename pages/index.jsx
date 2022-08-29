@@ -10,7 +10,7 @@ export default function Home() {
 	useEffect(() =>{
 		async function getProducts(){
 			try {
-				const {data} = await axios.get("http://chidesfoods.netlify.app/api/products"); 
+				const {data} = await axios.get("http://localhost:3000/api/products"); 
 				setProducts(data);
 			} catch (error) {
 				console.log(error)
